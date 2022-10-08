@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 function Weather() {
     const today = new Date();
     let date_now = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate());
@@ -12,9 +11,10 @@ function Weather() {
     const [date , setdate] = useState(date_now);
     const api = {
         url : 'https://api.openweathermap.org/data/2.5/',
-        key: "84a123b955d0729aad4100183845983c"
+        key : process.env.REACT_APP_API_KEY
     }
-
+    console.log(api.key);
+    console.log(process.env.REACT_APP_API_KEY);
     const url_icon = "https://openweathermap.org/img/w/";
 
     const hundlchange = (e)=>{
