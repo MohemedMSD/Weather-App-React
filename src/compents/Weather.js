@@ -13,8 +13,6 @@ function Weather() {
         url : 'https://api.openweathermap.org/data/2.5/',
         key : process.env.REACT_APP_API_KEY
     }
-    console.log(api.key);
-    console.log(process.env.REACT_APP_API_KEY);
     const url_icon = "https://openweathermap.org/img/w/";
 
     const hundlchange = (e)=>{
